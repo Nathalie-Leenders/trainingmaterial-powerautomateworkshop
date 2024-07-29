@@ -1,21 +1,19 @@
 # Power Platform Workshop - Prague Lab Introduction - TBD
 
-Welcome to the Power Platform Workshop in Prague! This lab is designed to provide hands-on experience with Microsoft's Power Platform, including Power Apps, Power Automate, and Power BI. Throughout this workshop, you'll learn how to build custom apps, automate workflows, and analyze data—all with no or minimal code.
+Welcome to the Power Platform Workshop 
+Power Up Your Power Platform development with Power Automate in Prague! This lab is designed to provide hands-on experience with Microsoft's Power Platform, including Power Apps, Power Automate, and Copilot Studio, Power Pages and PowerBI. Throughout this workshop, you'll learn how to build create automation workflows, and how to combine all of these technologies focusing on Power Automate to streamline automation.
 
 ## Objective
 
 The primary objective of this lab is to empower you with the skills and knowledge to leverage the Power Platform suite effectively. By the end of this workshop, you'll be able to:
 
-- Create custom business applications without writing code.
-- Automate business processes with Power Automate.
-- Analyze data and gain insights using Power BI.
-- Integrate various data sources and APIs into your Power Platform solutions.
+- TBD
 
 ## Prerequisites
 
 Before attending this lab, please ensure you have:
 
-- A Microsoft account with access to Power Platform.
+- A Microsoft account with access to the Power Platform.
 - Basic understanding of data models and business processes.
 - A laptop with a modern web browser (Chrome, Firefox, Edge) and internet connectivity.
 
