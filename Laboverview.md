@@ -72,7 +72,7 @@ In this exercise, you will create a Muppets-themed Canvas App with a button to s
 **Estimated Time:** Time for Exercise 4.1
 
 ## Exercise 4.2 Bonus Exercise: Creating a Canvas App for Power BI Integration 
-**Learning Objectives:** [In this exercise, you will create a Muppet-themed Canvas App that can be embedded into Power BI, uses the Power BI integration data connection, and is able to call a flow.
+**Learning Objectives:** In this exercise, you will create a Muppet-themed Canvas App that can be embedded into Power BI, uses the Power BI integration data connection, and is able to call a flow.
 **Estimated Time:** Time for Exercise 4.2
 
 ### Power Pages
