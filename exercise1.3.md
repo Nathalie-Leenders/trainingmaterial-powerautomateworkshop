@@ -35,9 +35,18 @@ In this exercise, you will create a Muppets-themed Canvas App called "Miss Piggy
 2. Select the button you added.
 3. In the **OnSelect** property, enter the following formula:
     ```plaintext
-    'MuppetsFlow'.Run(textinput1.text)
+    'MissPiggyText'.Run(textinput1.text)
     ```
 4. Save and publish your app.
+
+### Step 4.5: Optional - Display a success or error message
+1. Change your onselect code on the button to:
+```powerfx
+Set(varFlowoutput,MissPiggyText.Run(TextInput1.Text)); 
+If(varFlowoutput.workflowrun="Failed", 
+Notify(varFlowoutput.message,NotificationType.Error),
+Notify(varFlowoutput.message,NotificationType.Success))
+```
 
 ### Step 5: Test the App
 1. Open the app in preview mode.
