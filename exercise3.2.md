@@ -10,37 +10,37 @@ This guide will help you understand how to parse input and output from Copilot S
 
 ## Steps
 
-### 1. Create a Custom Connector
+### Step 1. Create a Custom Connector
 1. Navigate to Power Automate.
 2. Go to **Data** > **Custom connectors**.
 3. Click **+ New custom connector** and choose **Create from blank**.
 4. Enter a name for your connector and click **Continue**.
 5. Define the connector's general information, including the host URL for Copilot Studio.
 
-### 2. Define the Connector's Actions
+### Step 2. Define the Connector's Actions
 1. Go to the **Definition** tab.
 2. Click **+ New action**.
 3. Provide a name and description for the action.
 4. Define the request by specifying the HTTP method, URL, and headers.
 5. Define the response by specifying the expected output format.
 
-### 3. Create a Flow
+### Step 3. Create a Flow
 1. Navigate to **My flows** and click **+ New flow**.
 2. Choose the type of flow you want to create (e.g., Automated, Instant, Scheduled).
 3. Add a trigger to start the flow.
 
-### 4. Add the Custom Connector to the Flow
+### Step 4. Add the Custom Connector to the Flow
 1. Click **+ New step**.
 2. Search for your custom connector and select it.
 3. Choose the action you defined earlier.
 4. Configure the action by providing the necessary input parameters.
 
-### 5. Parse the Input and Output
+### Step 5. Parse the Input and Output
 1. Use the **Compose** action to parse the input data.
 2. Use the **Parse JSON** action to parse the output data.
 3. Define the schema for the JSON data to ensure proper parsing.
 
-### 6. Test the Flow
+### Step 6. Test the Flow
 1. Save the flow.
 2. Click **Test** to run the flow and verify that the input and output are parsed correctly.
 

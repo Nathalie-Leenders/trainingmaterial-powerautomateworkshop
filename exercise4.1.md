@@ -27,7 +27,5 @@ Learn how to add a button in Power BI that triggers a Power Automate flow to ref
 6. Paste the URL of the Power Automate flow you created.
 7. Apply and save your report.
 
-### Exercise Time
-**20 minutes**
 
 Now, when you click the button in your Power BI report, it will trigger the Power Automate flow to refresh the dataset.

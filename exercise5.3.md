@@ -16,7 +16,7 @@ There are a few steps needed: first, to understand how Power Pages works with fo
 
 ## My Power Automate Flow
 
-![Here you'll see my begin step, which is getting values from Power Pages, it uses the MSN weather connector to grab the values, and returns them to Power Pages](flow.png)
+![Here you'll see my begin step, which is getting values from Power Pages, it uses the MSN weather connector to grab the values, and returns them to Power Pages](Assets/5.3/flow.png)
 
 Once you've followed the steps, take note of the CSRF token. You'll need to remember that.
 
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', setupTemperatureFieldListener);
 * Call your JavaScript function, in my case: `setupTemperatureFieldListener()` and do another `ctrl-z`.
 * Type something in your field, and see if it returns the value from your Power Automate flow into your description.
 
-![In here you'll see the result of the temperature currently in Breda, which is quite cold, in metrics that has been returned from my flow run](powerpagesresult.png)
+![In here you'll see the result of the temperature currently in Breda, which is quite cold, in metrics that has been returned from my flow run](Assets/5.3/powerpagesresult.png)
 
 ## Implement the Script
 

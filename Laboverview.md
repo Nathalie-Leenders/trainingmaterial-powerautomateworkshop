@@ -53,7 +53,7 @@ In this exercise, you will create a Muppets-themed Canvas App with a button to s
 **Learning Objectives:** In this exercise, you will learn how to add a button to a Dataverse form in a model-driven app that calls a Power Automate flow. 
 **Estimated Time:** Time for Exercise 2.4
 
-## Exercise 2.5nAdding a Button to Call a Flow from the Ribbon Workbench 
+## Exercise 2.5 Adding a Button to Call a Flow from the Main Grid Command Bar
 **Learning Objectives:** In this exercise, you will learn how to add a button to the ribbon in a Model-driven app that calls a Power Automate flow.
 **Estimated Time:** [Time for Exercise 2.5]
 

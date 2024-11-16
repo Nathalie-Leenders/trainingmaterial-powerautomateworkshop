@@ -34,6 +34,7 @@ In this exercise, you will learn how to use a PowerApps trigger to get input and
 9. For the logic in the canvas app to work, you'll need to create an if statement based on the flow run. Add another Text in the action `Respond to PowerApps`, with the name Workflowrun. 
 10. Add in Success or Failed depending on the run after you're in. You'll need this later.
 
+
 # Summary
 You have successfully created a Canvas app with a button that triggers a Power Automate flow, gets input, and returns output. This exercise demonstrates how to integrate PowerApps and Power Automate to create interactive applications.
 

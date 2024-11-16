@@ -20,20 +20,23 @@ In this bonus exercise, you will integrate a cloud flow with your Power Pages si
 
 > **Note:** Only solution-aware flows can be attached to the Power Pages site.
 
-### Add the Flow to Your Site
-1. **Sign into Power Pages.**
-2. **Select your site and click `Edit`.**
-3. **Navigate to the `Set up` workspace, then select `Cloud flows (preview)` under `App integrations`.**
-4. **Click `+ Add cloud flow`.**
-5. **Search for the recently created flow.**
-6. **Click `+ Add roles` under `Roles`.**
-7. **Select roles that should have access to the flow.**
-8. **Click `Save`.**
+### Step 3: Add the Flow to Your Site
+
+1. Sign into Power Pages.
+2. Select your site and click `Edit`.
+3. Navigate to the `Set up` workspace, then select `Cloud flows (preview)` under `App integrations`.
+4. Click `+ Add cloud flow`.
+5. Search for the recently created flow.
+6. Click `+ Add roles` under `Roles`.
+7. Select roles that should have access to the flow.
+8. Click `Save`.
 
 > **Note:** When you add a flow to your site, a unique URL is generated that allows you to invoke the cloud flow from your site.
 
-### Invoke a Flow from Your Website
-Use Power Pages cloud flow API to interact with Power Automate for external service integration. Cloud flow API operations consist of HTTP requests and responses.
+### Step 4: Invoke a Flow from Your Website
+
+1. Use Power Pages cloud flow API to interact with Power Automate for external service integration.
+2. Cloud flow API operations consist of HTTP requests and responses.
 
 #### Operation Details
 | Operation       | Method | URI                                      |

@@ -4,7 +4,7 @@ In this exercise, you will learn how to configure a basic model-driven app. Plea
 
 ## Prerequisites
 - PowerApps Premium account
-- Basic understanding of PowerApps
+- Basic understanding of PowerApps and Dataverse
 
 ## Steps
 
@@ -22,6 +22,10 @@ In this exercise, you will learn how to configure a basic model-driven app. Plea
 2. Select the entities you want to include in your app.
 3. Click **Done**.
 
+## Step 3.1: Create new data (if you dont have any tables to use)
+1. If you dont have any data yet, create a new table in dataverse.
+2. For example, use the create table with AI function, with the following prompt: "For the muppet show, I will need a table to track episodes. Please give me columns like episode name, aired date, staff name, episode description and others you deem fit. Fill the table with some rows matching muppet episodes. Also, create a table for the Muppet staff members. Include the names of the muppets."
+
 ### Step 4: Design the App
 1. Use the app designer to add forms, views, and charts.
 2. Customize the layout and components as needed.
@@ -31,10 +35,11 @@ In this exercise, you will learn how to configure a basic model-driven app. Plea
 1. Click on **Play** to test your app.
 2. Ensure all components are working as expected.
 
-### Step 6: Share the App
+### Step 6: Share the App (optional)
 1. Click on **Share**.
 2. Enter the email addresses of the users you want to share the app with.
 3. Click **Share**.
 
 ## Conclusion
-You have successfully configured a basic model-driven app. Explore additional features and customization options to enhance your app further.
+You have successfully configured a basic model-driven app. 
+Explore additional features and customization options to enhance your app further.
