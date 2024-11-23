@@ -4,17 +4,7 @@ This exercise requires JavaScript knowledge and understanding of how to create a
 
 ## Calling a Power Automate Flow from a Dataverse Form in a Power Page Form
 
-Sounds easy, right? Trust me, it's not, but I hope this helps. I have had tremendous help from my colleague Laurens Hoogendoorn, who is completely awesome and helps me run with JavaScript (see what I did there) before learning how to crawl or walk. LOL. Laurens, you are the best!
-
-So, let me start at the beginning.
-
-There are a few steps needed: first, to understand how Power Pages works with forms; then, how to create a Power Automate cloud flow; then, create your form, create your flow, add JavaScript to call said flow, and voila. But don't worry, I will walk you through it.
-
-## Follow the Instructions of This Learn Article
-
-[Next step is to follow this Microsoft Learn article](https://learn.microsoft.com/en-us/power-pages/configure/power-automate-how-to/?wt.mc_id=DX-MVP-5005318)
-
-## My Power Automate Flow
+## The Power Automate Flow (created in 5.1)
 
 ![Here you'll see my begin step, which is getting values from Power Pages, it uses the MSN weather connector to grab the values, and returns them to Power Pages](Assets/5.3/flow.png)
 
@@ -44,10 +34,10 @@ shell.ajaxSafePost({
 
 ## Create Your Power Pages Form
 
-* Create your form, and in this case, I have a field called `temperatuur`.
-* I add this field in a step (I have a multi-step form) and make sure to add a description.
-* I'm not defining the description in my JavaScript; make sure you do. However, as it's my only one, it's not relevant for now.
-* Once you have the field in your form, go to Example, and hit F12 developer tools.
+1. Create your form, and in this case, I have a field called `temperatuur`.
+2. Add this field in a step (I have a multi-step form) and make sure to add a description.
+3. I'm not defining the description in my JavaScript; make sure you do. However, as it's my only one, it's not relevant for now.
+4. Once you have the field in your form, go to Example, and hit F12 developer tools.
 
 ## Identify Your Field Name
 
@@ -131,4 +121,4 @@ document.addEventListener('DOMContentLoaded', setupTemperatureFieldListener);
 
 Once you're satisfied, copy/paste your code into the Visual Studio Code editor, for your specific Form step, into the JavaScript container.
 
-Hit `ctrl-s`, and you're golden.
+Hit `ctrl-s`, and you're done.

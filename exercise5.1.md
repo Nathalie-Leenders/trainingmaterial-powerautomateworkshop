@@ -2,111 +2,317 @@
 
 ## Prerequisites
 - Power Pages license
-- Power Apps Premium
+- Power Automate Premium
 - JavaScript knowledge
+- Visual Studio Code basic knowledge
 
 ## Overview
-In this bonus exercise, you will integrate a cloud flow with your Power Pages site. Ensure you have completed the Power Automate steps, have a Power Page ready, and for the next bonus exercise, you will connect a Dataverse table with a form.
+In this bonus exercise, you will integrate a cloud flow with your Power Pages site. This leverages the already existing MS learn exercise, but you're more than welcome to invoke your own API or choose another action, so long as you can request information, and send information through.
 
 ## Steps to Integrate Cloud Flow
 
 ### Create a Cloud Flow
-1. **Sign into Power Pages.**
-2. **Select your site and click `Edit`.**
-3. **Navigate to the `Set up` workspace, then select `Cloud flows` under `App integrations`.**
-4. **Click `+ Create new flow`.**
-5. **Search for `Power Pages` and select `When Power Pages calls a flow` trigger.**
-6. **Define your flow steps and return values, then click `Save`.**
+1. Sign into Power Pages.
+2. Select your site and click `Edit`.
+3. Navigate to the `Set up` workspace, then select `Cloud flows` under `App integrations`.
+4. Click `+ Create new flow`.
+5. Search for `Power Pages` and select `When Power Pages calls a flow` trigger.
+6. Define your flow steps and return values, then click `Save`.
 
 > **Note:** Only solution-aware flows can be attached to the Power Pages site.
 
-### Step 3: Add the Flow to Your Site
+## Create a flow
 
-1. Sign into Power Pages.
-2. Select your site and click `Edit`.
-3. Navigate to the `Set up` workspace, then select `Cloud flows (preview)` under `App integrations`.
-4. Click `+ Add cloud flow`.
-5. Search for the recently created flow.
-6. Click `+ Add roles` under `Roles`.
-7. Select roles that should have access to the flow.
-8. Click `Save`.
+1. Sign into [Power Pages](https://make.powerpages.microsoft.com/).
 
-> **Note:** When you add a flow to your site, a unique URL is generated that allows you to invoke the cloud flow from your site.
+1. Select site **+ Edit**.
 
-### Step 4: Invoke a Flow from Your Website
+1. Navigate to the **Set up** workspace, then select **Cloud flows** under **App integrations**.
 
-1. Use Power Pages cloud flow API to interact with Power Automate for external service integration.
-2. Cloud flow API operations consist of HTTP requests and responses.
+1. Select **+ Create new flow**.
 
-#### Operation Details
-| Operation       | Method | URI                                      |
-|-----------------|--------|------------------------------------------|
-| Invoke cloud flow | POST   | `[Site URI]_/api/cloudflow/v1.0/trigger/<guid>` |
+1. Search for **Power Pages** Select **When Power Pages calls a flow** trigger.
 
-**Example:**
+1. Define your flow steps and return values and select **Save**.
 
-**Request:**
-```http
-POST https://contoso.powerappsportals.com/_api/cloudflow/v1.0/trigger/4d22a1a2-8a67-e681-9985-3f36acfb8ed4
-{
-    "Location": "Seattle"
-}
-```
+> [!NOTE]
+> Only [solution-aware](/power-automate/overview-solution-flows) flows can be attached to the Power Pages site.
 
-**Response:**
+## Step 1: Create cloud flow
 
-*Cloud flow without response action:*
-```http
-HTTP/1.1 Accepted
-Content-Type: application/json
-```
+Create a flow using the Power Pages trigger and use the **MSN weather** action to fetch weather data.
 
-*Cloud flow with response action:*
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-{
-    "conditions": "Rain",
-    "humidity": "93",
-    "latitude": "47.60620880126953",
-    "longitude": "-122.33206939697266"
-}
-```
+1. Sign into [Power Pages](https://make.powerpages.microsoft.com/).
 
-### Authenticating Cloud Flow API Requests
-You don't need to include an authentication code, as the application session manages authentication and authorization. All API calls must include a Cross-Site Request Forgery (CSRF) token.
+1. Select site + **Edit**
 
-### Passing Parameters to Cloud Flow
-In a cloud flow, you can define input parameters of type Text, Boolean, File, and Number. The parameter name in the request body should match the parameter name defined in the cloud flow trigger.
+1. Navigate to the **Set up workspace**, then select **Cloud flows** under App integrations.
 
-> **Important:**
-> - You must pass the request parameters name as defined in the cloud flow.
-> - Support for passing a parameter to a flow configured with secure inputs is not available.
+1. Select **+ Create new flow**
 
-### Sample JavaScript to Call a Flow
-This sample demonstrates how to call a flow using Asynchronous JavaScript and XML (AJAX).
+1. Search for **Power Pages**.
 
-```javascript
-shell.ajaxSafePost({
-    type: "POST",
-    url: "/_api/cloudflow/v1.0/trigger/44a4b2f2-0d1a-4820-bf93-9376278d49c4",
-    data: JSON.stringify({
-        "eventData": JSON.stringify({
-            "Email": "abc@contoso.com",
-            "File": {
-                "name": "Report.pdf",
-                "contentBytes": "base 64 encoded string"
+    - Select **When Power Pages calls a flow** trigger.
+
+    :::image type="content" source="media/cloud-flow/power-automate-power-pages.png" alt-text="Selecting Power Pages options in Power Automate.":::
+
+1. Select **+ Add an input**.
+
+1. Choose **Text**.
+
+1. Add a name as **Location**.
+
+1. Select **+ New step**.
+
+1. Search for **MSN Weather**.
+
+1. Select the **Get current weather** action.
+
+1. Focus cursor on **Location** input text Select **Location** parameter under **When Power Pages calls a flow** from dynamic content.
+
+    > [!NOTE]
+    > You can either keep the Imperial units or change to metric.
+
+1. Select **+ New step**.
+
+1. Search for **Power Pages**.
+
+1. Select **Return value(s) to Power Pages** action.
+
+1. Select **+ Add and output**.
+
+1. Select **Text**.
+
+1. Enter **Pressure** as the title.
+
+1. Under **Get current weather**, choose dynamic content **Pressure**.
+
+1. Repeat to create the following output steps using **text** type:
+
+    1. Humidity
+    1. Temperature
+    1. UV index
+    1. Wind speed
+    1. Location
+    1. Visibility Distance
+    1. Latitude
+    1. Longitude
+    1. Temperature Units
+    1. Pressure Units
+    1. Speed Units
+    1. Distance Units
+    1. Conditions
+
+1. Select **Save**
+
+1. Name the flow **Get current weather**.
+
+## Step 2: Add flow to site
+
+After saving the flow, you need to add it to the site and assign a proper web role.
+
+1. Sign into [Power Pages](https://make.powerpages.microsoft.com/).
+
+1. Create a site with one of the [starter layouts](../getting-started/create-manage.md).
+
+1. Choose the site and select **Edit**.
+
+1. Navigate to the **Set up** workspace.
+1. Under **App integrations**, select **Cloud flows**.
+
+1. Select **+ Add cloud flow**.
+
+1. Search for **Get current weather flow**.
+
+1. Select **+ Add roles** under Roles.
+
+1. Select **Anonymous Users** role.
+
+1. Select **Add**.
+
+1. Copy the URL.
+
+    > [!NOTE]
+    > This is the unique URL used to connect to the associated cloud flow. You'll use this URL later to call the current weather flow.
+
+## Step 3: Create a page to display MSN weather data
+
+After creating the flow and attaching it to the Power Pages site, you can now call it from a control event using JavaScript.
+
+1. Select **Pages** workspace.
+
+1. Select **+ Page**.
+
+1. Name the Page "*Today's weather report*".
+
+1. Select **Edit code** to open Visual Studio Code.
+
+1. Paste this code:
+
+    ```javascript
+        <style>
+            div.weatherdetail {
+                border: 1px solid #F3F2F1;
+                border-radius: 12px;
+                box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1), 0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+                padding: 24px;
             }
-        })
-    })
-})
-.done(function (response) {
-    // Handle success
-})
-.fail(function(){
-    // Handle failure
-});
-```
+            .weather label {
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                color: #323130;
+            }
+            .weather button {
+                font-family: 'Segoe UI';
+                padding: 8px 16px;
+                font-size: 16px;
+                background-color: #6219D9;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                outline: none;
+            } 
+            div.weather {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px;
+                gap: 36px;
+                width: 840px;
+            }
+            span.temperature {
+                font-family: Segoe UI;
+                font-size: 96px;
+                font-style: normal;
+                font-weight: 600;
+                color: #6219d9;
+            }
+            span.weatherinfov1 {
+                font-family: Segoe UI;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                color: #201f1e;
+            }
+            span.weatherinfov2 {
+                font-family: Segoe UI;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                color: #a19f9d;
+            }
+        </style>
+        
+        <div class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+            <div class="container" style="display: flex; flex-wrap: wrap;">
+                <div class="col-md-12 columnBlockLayout weather" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 310px; word-break: break-word; padding: 0 180px; margin: 60px 0px;">
+                    <h1>What's the weather?</h1>
+                    <form id="cityForm">
+                        <label for="locationInput">Enter a location to find out</label>
+                        <br>
+                        <input type="text" style="width: 840px; border: 1px solid #D2D0CE;" id="locationInput" required />
+                        <p>
+                        <p>
+                            <button type="submit">Submit</button>
+                        </p>
+                    </form>
+                    <div id="weatherdetail" class="weatherdetail" style="display: none;width: 840px">
+                        <div>
+                            <div>
+                                <span class="temperature" id="temperature"> </span>
+                                <span class="weatherinfov1" id="temperature_units"></span>
+                            </div>
+                            <div>
+                                <span class="weatherinfov1" style="font-size: 36px;" id="location"> </span>
+                                <br>
+                                <span class="weatherinfov1" style="font-size: 24px;" id="cordinates"></span>
+                                <p>
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <div style="flex: 1;">
+                                <span class="weatherinfov2">Wind: </span>
+                                <span class="weatherinfov1" id="windspeed"></span>
+                                <span class="weatherinfov1" id="speed_units"> </span>
+                            </div>
+                            <div style="flex: 1;">
+                                <span class="weatherinfov2">Visibility: </span>
+                                <span class="weatherinfov1" id="visibility"></span>
+                                <span class="weatherinfov1" id="distance_units"></span>
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <div style="flex: 1;">
+                                <span class="weatherinfov2">UV Index: </span>
+                                <span class="weatherinfov1" id="uv"></span>
+                            </div>
+                            <div style="flex: 1;">
+                                <span class="weatherinfov2">Conditions: </span>
+                                <span class="weatherinfov1" id="condition"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById("cityForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission
+                var weatherDiv = document.getElementById("weatherdetail");
+                weatherDiv.style.display = "none";
+        
+                var location = document.getElementById("locationInput").value;
+        
+                var _url = "<Cloud flow URL>";
+                
+              var data = {};
+              data["Location"] = location;
+        
+                var payload = {};
+                payload.eventData = JSON.stringify(data);
+                shell
+                    .ajaxSafePost({
+                        type: "POST",
+                        url: _url,
+                        data: payload
+                    })
+                    .done(function (response) {
+                        const result = JSON.parse(response);
+                        document.getElementById("temperature").innerHTML = result["temperature"];
+                        document.getElementById("windspeed").innerHTML = result["wind_speed"];
+                        document.getElementById("visibility").innerHTML = result["visibility_distance"];
+                        document.getElementById("uv").innerHTML = result["uv_index"];
+                        document.getElementById("location").innerHTML = result["location"];
+                        document.getElementById("condition").innerHTML = result["conditions"];
+                        document.getElementById("temperature_units").innerHTML = result["temperature_units"];
+                        document.getElementById("speed_units").innerHTML = result["speed_units"];
+                        document.getElementById("distance_units").innerHTML = result["distance_units"];
+                        document.getElementById("cordinates").innerHTML = parseFloat(result["latitude"]).toFixed(2) + ', ' + parseFloat(result["longitude"]).toFixed(2);
+                        weatherDiv.style.display = "block";
+                    })
+                    .fail(function () {
+                        alert("failed");
+                    });
+            });
+        </script>
+    ```
 
-## Next Bonus Exercise
-Connect a Dataverse table with a form.
+1. Replace the URL with the one you copied in the previous step.
+
+1. Save the code by selecting **CTRL + S**.
+
+1. Select **Sync** in design studio.
+
+## Step 4: Test the flow integration
+
+To test the flow integration functionality:
+
+1. Select **Preview** to open the site.
+
+1. Enter a postal code or city in **Location** text box.
+
+1. Select the **Submit** button.

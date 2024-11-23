@@ -19,17 +19,5 @@ In this exercise, you will add a Dataverse table to Power Pages and create a mul
 5. Add the necessary steps and fields to the form.
 6. Save the form.
 
-### Step 3: Connect Flow from Exercise 5.1
-1. Open the flow created in Exercise 5.1.
-2. Ensure the flow is set to trigger on form submission.
-3. Verify that the flow actions are correctly mapped to the new Dataverse table.
-4. Save and test the flow.
-
-### Step 4: Test the Integration
-1. Navigate to the Power Pages site.
-2. Fill out the multi-step form and submit it.
-3. Verify that the data is correctly added to the Dataverse table.
-4. Check that the flow from Exercise 5.1 executes as expected.
-
 ## Summary
-You have successfully added a Dataverse table to Power Pages, created a multi-step form, and ensured the flow from Exercise 5.1 is still connected.
+You have successfully added a Dataverse table to Power Pages and created a multi-step form. In the next bonus exercise, you will learn how to call the flow from a field in your form.
