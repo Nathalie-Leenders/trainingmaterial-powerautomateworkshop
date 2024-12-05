@@ -3,7 +3,7 @@
 Welcome to the Power Platform Workshop
 Power Up Your Power Platform development with Power Automate in Prague! This lab is designed to provide hands-on experience with Microsoft's Power Platform, including Power Apps, Power Automate, and Copilot Studio, Power Pages and PowerBI. Throughout this workshop, you'll learn how to build create automation workflows, and how to combine all of these technologies focusing on Power Automate to streamline automation.
 
-## Objective
+## Objectives
 
 The primary objective of this lab is to empower you with the skills and knowledge to leverage the Power Platform suite effectively. By the end of this workshop, you'll be able to:
 
