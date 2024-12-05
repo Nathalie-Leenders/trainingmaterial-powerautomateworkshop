@@ -1,9 +1,11 @@
 # Exercise 7: Combining RPA and Cloud Flows
 
 ## Objective
+
 Learn how to call a Power Automate cloud flow from a desktop flow and vice versa.
 
 ## Prerequisites
+
 - Power Automate Desktop installed
 - Access to Power Automate (cloud)
 - Basic understanding of creating flows
@@ -35,6 +37,7 @@ Learn how to call a Power Automate cloud flow from a desktop flow and vice versa
 1. Open Power Automate Desktop.
 2. Create a new desktop flow.
 3. Save the flow.
+
 ### Step 2: Create a Cloud Flow
 
 1. Go to Power Automate.
@@ -46,4 +49,5 @@ Learn how to call a Power Automate cloud flow from a desktop flow and vice versa
 5. Save and run the cloud flow.
 
 ## Conclusion
+
 By completing this exercise, you have learned how to integrate Power Automate cloud flows with desktop flows, enabling seamless automation across different environments.

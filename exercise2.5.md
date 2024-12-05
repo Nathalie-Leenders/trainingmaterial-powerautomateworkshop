@@ -5,6 +5,7 @@ In this exercise, you will learn how to add a button to the main grid command ba
 ## Steps
 
 ### Step 0: Create a flow capable of receiving this
+
 1. Create a flow, with the trigger When an HTTP request is received
 2. Configure your actions to notify the Swedish Chef in advance about his required appearances.
 3. Add an action to send an email to the Chef with the details of the show idea.
