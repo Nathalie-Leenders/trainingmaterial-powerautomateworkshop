@@ -12,7 +12,10 @@ In this exercise, you will create a Muppet-themed Canvas App that can be embedde
 
 When you add the Power Apps visual to your report, it launches Power Apps Studio with a live data connection between Power Apps and Power BI.
 
+## Steps
+
 ### Step 1: Open the Muppet Opportunity Analysis Sample Report
+
 1. Open the Muppet Opportunity Analysis sample report and select the Upcoming Opportunities page.
 2. Open the report in Editing mode by selecting **Edit** from the Options bar.
 

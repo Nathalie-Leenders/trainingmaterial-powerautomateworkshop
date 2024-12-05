@@ -1,17 +1,20 @@
 # Bonus Exercise: Integrate Cloud Flow with Power Pages (Muppets Theme)
 
 ## Prerequisites
+
 - Power Pages license
 - Power Automate Premium
 - JavaScript knowledge
 - Visual Studio Code basic knowledge
 
 ## Overview
+
 In this bonus exercise, you will integrate a cloud flow with your Power Pages site. This leverages the already existing MS learn exercise, but you're more than welcome to invoke your own API or choose another action, so long as you can request information, and send information through.
 
 ## Steps to Integrate Cloud Flow
 
 ### Create a Cloud Flow
+
 1. Sign into Power Pages.
 2. Select your site and click `Edit`.
 3. Navigate to the `Set up` workspace, then select `Cloud flows` under `App integrations`.

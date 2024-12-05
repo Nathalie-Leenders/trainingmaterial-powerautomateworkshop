@@ -5,6 +5,7 @@ In this exercise, you will add a Dataverse table to Power Pages and create a mul
 ## Steps
 
 ### Step 1: Add Dataverse Table
+
 1. Navigate to the Power Apps portal.
 2. Select **Dataverse** from the left-hand menu.
 3. Click on **Tables** and then **New table**.
@@ -12,6 +13,7 @@ In this exercise, you will add a Dataverse table to Power Pages and create a mul
 5. Save the table.
 
 ### Step 2: Create Multi-Step Form
+
 1. Go to **Power Pages**.
 2. Select the site where you want to add the form.
 3. Click on **Forms** and then **New form**.
@@ -20,4 +22,5 @@ In this exercise, you will add a Dataverse table to Power Pages and create a mul
 6. Save the form.
 
 ## Summary
+
 You have successfully added a Dataverse table to Power Pages and created a multi-step form. In the next bonus exercise, you will learn how to call the flow from a field in your form.

@@ -2,18 +2,21 @@
 
 In this exercise, we will combine all the elements from the previous exercises into a single cohesive solution. This solution will demonstrate how the Power Platform components can work together seamlessly.
 
-## Steps to Combine Elements
+## Steps
 
 ### 1. Canvas App Integration
+
 - **Create a Canvas App**: Start by creating a Canvas App where users can input data.
 - **Call Power Automate**: Use the Power Automate connector to trigger a flow from the Canvas App. This flow will process the data and feed it into the Model-Driven App.
 
 ### 2. Power Automate Flow
+
 - **Design the Flow**: Create a Power Automate flow that takes input from the Canvas App.
 - **Data Processing**: Add actions to process the data as required.
 - **Feed Data to Model-Driven App**: Use the Common Data Service (CDS) connector to insert or update records in the Model-Driven App.
 
 ### 3. Model-Driven App
+
 - **Embed Power BI Report**: In the Model-Driven App, embed a Power BI report to visualize the data processed by the flow.
 - **Data Interaction**: Ensure that the data from the Canvas App and Power Automate flow is accurately reflected in the Model-Driven App.
 
